@@ -58,24 +58,24 @@ import java.util.concurrent.atomic.AtomicInteger;
                     regId = registerGCM();
                     Log.d(TAG, "GCM RegId: " + regId);
                 }
-
-                //step 2: register with XMPP App Server
-                if(!regId.isEmpty()) {
-                    EditText mUserName = (EditText) findViewById(R.id.userName);
-                    signUpUser = mUserName.getText().toString();
-                    Bundle dataBundle = new Bundle();
-                    dataBundle.putString("ACTION", "SIGNUP");
-                    dataBundle.putString("USER_NAME", signUpUser);
-                    messageSender.sendMessage(dataBundle,gcm);
-                    signupFlag = true;
-                    Toast.makeText(context,
-                            "Sign Up Complete!",
-                            Toast.LENGTH_LONG).show();
-                } else {
-                    Toast.makeText(context,
-                            "Google GCM RegId Not Available!",
-                            Toast.LENGTH_LONG).show();
-                }
+                //cái này là nố up XMPP
+//                step 2: register with XMPP App Server
+//                if(!regId.isEmpty()) {
+//                    EditText mUserName = (EditText) findViewById(R.id.userName);
+//                    signUpUser = mUserName.getText().toString();
+//                    Bundle dataBundle = new Bundle();
+//                    dataBundle.putString("ACTION", "SIGNUP");
+//                    dataBundle.putString("USER_NAME", signUpUser);
+//                    messageSender.sendMessage(dataBundle,gcm);
+//                    signupFlag = true;
+//                    Toast.makeText(context,
+//                            "Sign Up Complete!",
+//                            Toast.LENGTH_LONG).show();
+//                } else {
+//                    Toast.makeText(context,
+//                            "Google GCM RegId Not Available!",
+//                            Toast.LENGTH_LONG).show();
+//                }
             }
         });
 
@@ -135,7 +135,7 @@ import java.util.concurrent.atomic.AtomicInteger;
         return regId;
     }
 
-    private String getRegistrationId() {
+   private String getRegistrationId() {
         final SharedPreferences prefs = getSharedPreferences(
                 SignUpActivity.class.getSimpleName(), Context.MODE_PRIVATE);
         String registrationId = prefs.getString(REG_ID, "");
@@ -167,7 +167,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 
     private void registerInBackground() {
         new AsyncTask<Object, Object, Object>() {
-            protected String doInBackground(final Void... params) {
+            @SuppressWarnings("unused")
+			protected String doInBackground(final Void... params) {
                 String msg = "";
                 try {
                     if (gcm == null) {
@@ -186,7 +187,8 @@ import java.util.concurrent.atomic.AtomicInteger;
                 return msg;
             }
 
-            protected void onPostExecute(final String msg) {
+            @SuppressWarnings("unused")
+			protected void onPostExecute(final String msg) {
                 Log.d(TAG, "Registered with GCM Server." + msg);
             }
 
