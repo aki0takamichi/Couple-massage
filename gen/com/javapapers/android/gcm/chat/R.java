@@ -32,20 +32,23 @@ public final class R {
         public static final int ic_launcher=0x7f020005;
     }
     public static final class id {
-        public static final int ButtonLogin=0x7f090007;
-        public static final int ButtonSignUp=0x7f090009;
-        public static final int action_settings=0x7f09000d;
-        public static final int buttonSend=0x7f090003;
-        public static final int chatText=0x7f090002;
-        public static final int editText=0x7f090008;
-        public static final int form=0x7f090001;
-        public static final int imageView=0x7f09000a;
-        public static final int listView1=0x7f090000;
-        public static final int output=0x7f09000b;
-        public static final int refreshButton=0x7f09000c;
-        public static final int singleMessage=0x7f090005;
-        public static final int singleMessageContainer=0x7f090004;
-        public static final int userName=0x7f090006;
+        public static final int ButtonLogin=0x7f0a0007;
+        public static final int ButtonSignUp=0x7f0a0009;
+        public static final int action_settings=0x7f0a000d;
+        public static final int buttonSend=0x7f0a0003;
+        public static final int chatText=0x7f0a0002;
+        public static final int editText=0x7f0a0008;
+        public static final int form=0x7f0a0001;
+        public static final int imageView=0x7f0a000a;
+        public static final int listView1=0x7f0a0000;
+        public static final int output=0x7f0a000b;
+        public static final int refreshButton=0x7f0a000c;
+        public static final int singleMessage=0x7f0a0005;
+        public static final int singleMessageContainer=0x7f0a0004;
+        public static final int userName=0x7f0a0006;
+    }
+    public static final class integer {
+        public static final int google_play_services_version=0x7f080000;
     }
     public static final class layout {
         public static final int activity_chat=0x7f030000;
@@ -55,9 +58,9 @@ public final class R {
         public static final int activity_user_list=0x7f030004;
     }
     public static final class menu {
-        public static final int sign_up=0x7f080000;
-        public static final int splash=0x7f080001;
-        public static final int user_list=0x7f080002;
+        public static final int sign_up=0x7f090000;
+        public static final int splash=0x7f090001;
+        public static final int user_list=0x7f090002;
     }
     public static final class string {
         public static final int action_settings=0x7f060002;

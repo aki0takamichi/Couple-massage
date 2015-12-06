@@ -13,12 +13,12 @@ import com.google.android.gms.gcm.GoogleCloudMessaging;
 /**
  * Created by Joe on 6/1/2014.
  */
-@SuppressLint("NewApi") public class MessageSender {
+public class MessageSender {
     private static final String TAG = "MessageSender";
     AsyncTask<Void, Void, String> sendTask;
     AtomicInteger ccsMsgId = new AtomicInteger();
 
-    @SuppressLint("NewApi") public void sendMessage(final Bundle data, final GoogleCloudMessaging gcm ) {
+     public void sendMessage(final Bundle data, final GoogleCloudMessaging gcm ) {
 
         sendTask = new AsyncTask<Void, Void, String>() {
             @Override
